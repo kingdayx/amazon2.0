@@ -3,7 +3,7 @@ import axios from "axios";
 
 const getProducts = async () => {
   const res = await axios.get("https://fakestoreapi.com/products");
-  return res;
+  return res.data;
 };
 
 async function ProductFeed() {
@@ -12,10 +12,9 @@ async function ProductFeed() {
   console.log("products", products);
   return (
     <div>
-      {/* ProductFeed
       {products.map((products) => {
-        <p>{products.title} </p>;
-      })} */}
+        return <p>{products.title} </p>;
+      })}
     </div>
   );
 }
