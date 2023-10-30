@@ -4,9 +4,11 @@ module.exports = {
   media: false,
   theme: {
     extend: {
-      amazon_blue: {
-        light: "#232F3E",
-        DEFAULT: "#131921",
+      colors: {
+        amazon_blue: {
+          light: "#232F3E",
+          DEFAULT: "#131921",
+        },
       },
     },
   },
