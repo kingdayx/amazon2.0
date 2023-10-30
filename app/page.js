@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 import ProductFeed from "@/components/ProductFeed";
 
-export default function Page({ products }) {
+export default function Page() {
   return (
     <div className="bg-gray-100">
       <Head>
@@ -16,7 +16,7 @@ export default function Page({ products }) {
         {/* Banner */}
         <Banner />
         {/* Product Feed */}
-        <ProductFeed products={products} />
+        <ProductFeed />
       </main>
     </div>
   );

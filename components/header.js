@@ -18,6 +18,7 @@ function Header() {
             height={40}
             objectFit="contain"
             className="cursor-pointer"
+            alt=""
           />
         </div>
         {/* Search */}
