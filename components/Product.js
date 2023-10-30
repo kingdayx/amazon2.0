@@ -25,7 +25,7 @@ export default function Product({
         {" "}
         {category}{" "}
       </p>
-      <Image src={image} height={200} width={200} objectFit="contain" />
+      <Image className="mx-5" src={image} height={200} width={200} />
 
       <h4 className="my-3"> {title} </h4>
       <div className="flex">
@@ -35,18 +35,19 @@ export default function Product({
             <StarIcon className="h-5 text-yellow-500" />
           ))}
       </div>
-      <p className="text-xs my-2"> {description} </p>
-      <div>$ {price}</div>
+      <p className="text-xs my-2 line-clamp-2"> {description} </p>
+      <div className="mb-5">$ {price}</div>
       {hasPrime && (
-        <div>
+        <div className="flex items-center space-x-2 -mt-5">
           <img
+            className="w-12"
             src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/052018/untitled-1_282.png?zBgfG0XEfdsPUq33GRuhu6udfY3Yu_rs&itok=39OQ7JCF"
             alt="alt"
           />
-          <p>FREE Next-day Delivery</p>
+          <p className="text-xs texy-gray-500">FREE Next-day Delivery</p>
         </div>
       )}
-      <button>Add to Basket</button>
+      <button className="mt-auto button">Add to Basket</button>
     </div>
   );
 }
