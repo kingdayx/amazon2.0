@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Product from "./Product";
 
 const getProducts = async () => {
   const res = await axios.get("https://fakestoreapi.com/products");
@@ -12,8 +13,18 @@ async function ProductFeed() {
   console.log("products", products);
   return (
     <div>
-      {products.map((products) => {
-        return <p>{products.title} </p>;
+      {products.map(({ id, title, price, description, category, image }) => {
+        return (
+          <Product
+            key={id}
+            id={id}
+            title={title}
+            price={price}
+            description={description}
+            category={category}
+            image={image}
+          />
+        );
       })}
     </div>
   );
