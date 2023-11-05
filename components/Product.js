@@ -20,12 +20,12 @@ export default function Product({
   );
   const [hasPrime] = useState(Math.random() < 0.5);
   return (
-    <div className="relative flex flex-col m-5 bg-white z-30 p-10">
+    <div className="relative flex flex-col m-10 bg-white z-30 p-10 ">
       <p className="absolute top-2 right-2 text-xs italic text-gray-400">
         {" "}
         {category}{" "}
       </p>
-      <Image className="mx-5" src={image} height={200} width={200} />
+      <Image className="" src={image} height={200} width={200} />
 
       <h4 className="my-3"> {title} </h4>
       <div className="flex">
